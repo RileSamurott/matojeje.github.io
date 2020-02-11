@@ -1,0 +1,18 @@
+@font-face {
+	font-family: "Matofont";
+	src: url("/fonts/Matofont17.ttf") format("truetype"),
+		 url("/fonts/Matofont17.otf") format("opentype");
+}
+
+body {
+	font-family:  "Matofont", fantasy, sans-serif;
+	font-size: larger;
+}
+
+.container {
+	top: 50%;
+	left: 50%;
+	position: fixed;
+	transform: translate(-50%, -50%);
+	text-align: center;
+  }
