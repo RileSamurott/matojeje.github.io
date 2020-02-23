@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="theme-color" content="#3DFFA7">
+    <meta name="theme-color" content="#02659E">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
@@ -13,28 +13,67 @@
 
     <nav class="z-depth-0 light-blue darken-3">
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo center matofont">Mato the Riolu!</a>
+            <a href="#" class="brand-logo center matofont truncate">Mato's ref sheet</a>
             <ul id="nav-mobile" class="left hide-on-med-and-up">
                 <li><a href="#" data-target="slide-out" class="sidenav-trigger waves-effect circle"><i class="material-icons">menu</i></a></li>
             </ul>
-            <!--
-             <ul id="nav-mobile" class="right hide-on-med-and-up">
-                <li><a class="sidenav-trigger waves-effect circle"><i class="material-icons">color_lens</i></a></li>
-            </ul>
-            -->
         </div>
     </nav>
 
     <ul id="slide-out" class="sidenav">
+
+        <li><div class="user-view">
+            <div class="background" style="filter:brightness(0.5)">
+                <img src="https://images.vectorhq.com/images/istock/previews/9395/93954321-dog-paw-and-bone-anilams-pattern-vector-illustration.jpg">
+            </div>
+            <a href="#user"><img class="circle" src="https://cdn.discordapp.com/avatars/189400498497912832/9a66593ec02cf594644c694a9c7e13d6.webp"></a>
+            <a href="#name"><span class="white-text name">Mato is a puppy</span></a>
+            <a href="#email"><span class="white-text email">hi</span></a>
+        </div></li>
+
         <li><a class="subheader">Basic info</a></li>
-        <li><a class="waves-effect">meowdy! 1</a></li>
-        <li><a class="waves-effect">meowdy! 2</a></li>
+
+        <li><a class="waves-effect"><i class="material-icons">
+            notes</i>
+            meowdy! 1</a></li>
+        <li><a class="waves-effect"><i class="material-icons">
+            color_lens</i>
+            meowdy! 2</a></li>
+        <li><a class="waves-effect"><i class="material-icons">
+            perm_media</i>
+            meowdy! 3</a></li>
+
         <li><div class="divider"></div></li>
         <li><a class="subheader">Fun stuff</a></li>
-        <li><a class="waves-effect">meowdy! 3</a></li>
+
+        <li><a class="waves-effect"><i class="material-icons">
+            chat</i>
+            meowdy! 4</a></li>
+
+        <li><a class="waves-effect"><i class="material-icons">
+            pets</i>
+            meowdy! 5</a></li>
+
+        <li><a class="waves-effect"><i class="material-icons">
+            gesture</i>
+            meowdy! 6</a></li>
+
+        <li><div class="divider"></div></li>
+
+        <li><a class="waves-effect"><i class="material-icons">
+            airplanemode_active</i>
+            hi chris!</a></li>
     </ul>
 
-    <div class="row dont-hide-on-med-and-up">
+    <div class="dont-hide-on-med-and-up" id="mobile">
+        <div class="card hide-on-small-only no_mb">
+            <div class="card-content black-text flow-text">
+                Hey!! You're looking at this page on your computer, probably. I haven't started making the desktop version yet, and even though I did make it so that the mobile version stuff does show up on desktop, it's not gonna look good in landscape mode.<br>
+                Press F12 to open DevTools and then Ctrl+Shift+M to enter responsive/device mode! And then just either pick a phone or resize this be so wide that this message disappears.<br>
+                Alternatively just look at this on your phone...? ´:3
+                <p class="right matofont">_happy</p>
+            </div>
+        </div>
         <!--
         <div class="fixed-action-btn">
             <a class="btn-floating btn-large white pulse">
@@ -42,31 +81,84 @@
             </a>
         </div>
         -->
-        <div class="col s10 nopadding">
-            <div class="container matofont">
-                <div class="section">
-                    <div class="row"><div class="col s12">
-                            <!-- <img width="100%" class="materialboxed" src="puppy.png" alt="puppy" id="puppy"> -->
-                            <div class="carousel materialboxed" data-caption="Tap outside the image to close">
-                                <a class="carousel-item"><img src="puppy_front.png"></a>
-                                <a class="carousel-item"><img src="puppy_back.png"></a>
-                              </div>
-                    </div></div>
+        <div class="row no_mb" style="display: flex">
+            <div class="col s10" id="mobile_poses">
+                <!-- <img width="100%" class="materialboxed" data-caption="Tap outside the image to close" src="puppy.png" alt="puppy" id="puppy"> -->
+                <div class="carousel">
+                    <a class="carousel-item"><img src="puppy_back_big.png" alt="back view"></a>
+                    <a class="carousel-item"><img src="mikeluuu.png" alt="lucario?"></a>
+                    <a class="carousel-item"><img src="puppy_front.jpg" alt="front view"></a>
+                    <a class="carousel-item"><img src="cleaner.png" alt="front view but better"></a>
+                </div><!--
                     <div class="row"><div class="col s12">
         it's him! ee
+        <br>these are placeholder images!
                     </div></div>
+            -->
+            </div>
+
+            <div class="col s2 palette darkcover" id ="mobile_palette" style="border-left: 2px solid black;">
+                <div class="tooltipped colorblob" data-position="left" style="background-color: #78E0D9;" data-tooltip="Main fur:<br>#78E0D9"></div>
+                <div class="tooltipped colorblob" data-position="left" style="background-color: #554E5D;" data-tooltip="Dark fur:<br>#554E5D"></div>
+                <div class="tooltipped colorblob" data-position="left" style="background-color: #14C8E8;" data-tooltip="Eye iris:<br>#14C8E8"></div>
+                <div class="tooltipped colorblob" data-position="left" style="background-color: #FFDA38;" data-tooltip="Collar:<br>#FFDA38"></div>
+                <div class="tooltipped colorblob" data-position="left" style="background-color: #F4F4F4;" data-tooltip="White pad:<br>#F4F4F4"></div>
+                <div class="tooltipped colorblob" data-position="left" style="background-color: #3DFFA7;" data-tooltip="Paw pad:<br>#3DFFA7"></div>
+                <div class="tooltipped colorblob" data-position="left" style="background-color: #E47775;" data-tooltip="Tongue:<br>#E47775"></div>
+            </div>
+        </div>
+
+        <!-- <div class="black divider"></div> -->
+        
+        <div class="row darkcover no_mb">
+            <div class="container matofont" style="width: 100%; padding: 0.5em">
+                <div class="section" id="mobile_details">
+                    <div class="row">
+                        <div class="col s4"><img width=100% class="materialboxed circle" src="detail_ph.png" data-caption="This is a caption!"></div>
+                        <div class="col s4"><img width=100% class="materialboxed circle" src="detail_ph.png" data-caption="This is a caption!"></div>
+                        <div class="col s4"><img width=100% class="materialboxed circle" src="detail_ph.png" data-caption="This is a caption!"></div>
+                    </div>
+                    <div class="row no_mb">
+                        <div class="col s4"><img width=100% class="materialboxed circle" src="detail_ph.png" data-caption="This is a caption!"></div>
+                        <div class="col s4"><img width=100% class="materialboxed circle" src="detail_ph.png" data-caption="This is a caption!"></div>
+                        <div class="col s4"><img width=100% class="materialboxed circle" src="detail_ph.png" data-caption="This is a caption!"></div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col s2 palette">
-            <div class="tooltipped colorblob" data-position="left" data-tooltip="Main fur:<br>#78E0D9" style="background-color: #78E0D9;"></div>
-            <div class="tooltipped colorblob" data-position="left" data-tooltip="Dark fur:<br>#554E5D" style="background-color: #554E5D;"></div>
-            <div class="tooltipped colorblob" data-position="left" data-tooltip="Eye iris:<br>#14C8E8" style="background-color: #14C8E8;"></div>
-            <div class="tooltipped colorblob" data-position="left" data-tooltip="Collar:<br>#FFDA38" style="background-color: #FFDA38;"></div>
-            <div class="tooltipped colorblob" data-position="left" data-tooltip="White pad:<br>#F4F4F4" style="background-color: #F4F4F4;"></div>
-            <div class="tooltipped colorblob" data-position="left" data-tooltip="Paw pad:<br>#3DFFA7" style="background-color: #3DFFA7;"></div>
-            <div class="tooltipped colorblob" data-position="left" data-tooltip="Tongue:<br>#E47775" style="background-color: #E47775;"></div>
+
+        <div class="row no_mb">
+            <div class="container matofont">
+                <div class="section" id="mobile_quotes">
+                    <div class="row">
+                        <div class="col s12">
+                            <blockquote class="flow-text">
+Mato is a smol/friend type pokemon.<br>
+His IV's are very low. He's not very fast, he's not very strong, and he's very soft.<br>
+However, due to his typing, the moves he gets STAB on are much more effective when your stats are low. Mato is very viable option and lovable.
+                            </blockquote>
+                            -- Ticki
+                        </div>
+                    </div>
+                    <div class="row no_mb">
+                        <div class="col s12">
+                            <blockquote class="flow-text">
+                                Blockquote
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <footer class="page-footer cyan darken-2 white-text matofont nopadding">
+            <div class="footer-copyright">
+                <div class="container">
+                    <span class="left truncate">You can find more info in the side menu!</span>
+                    <span class="right">By Mato</span>
+                </div>
+            </div>
+        </footer>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script> -->
