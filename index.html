@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
 </head>
-<body class="blue-grey darken-4 white-text" onload="M.AutoInit()">
+<body class="blue-grey darken-4 white-text" onload="loaded()">
 
     <nav class="z-depth-0 light-blue darken-3">
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo center matofont truncate">Mato's ref sheet</a>
+            <a href="#" class="brand-logo center matofont truncate">Mato the Riolu</a>
             <ul id="nav-mobile" class="left hide-on-med-and-up">
                 <li><a href="#" data-target="slide-out" class="sidenav-trigger waves-effect circle"><i class="material-icons">menu</i></a></li>
             </ul>
@@ -31,45 +32,43 @@
             <a href="#email"><span class="white-text email">hi</span></a>
         </div></li>
 
-        <li><a class="subheader">Basic info</a></li>
+        <li><a class="subheader">On this page</a></li>
 
-        <li><a class="waves-effect"><i class="material-icons">
+        <li><a class="waves-effect" onclick="closeSidenav(0)" href="#mobile_poses"><i class="material-icons">
+            view_carousel</i>
+            Poses</a></li>
+        <li><a class="waves-effect" onclick="closeSidenav(0)" href="#mobile_details"><i class="material-icons">
+            pageview</i>
+            Close-ups</a></li>
+        <li><a class="waves-effect" onclick="closeSidenav(0)" href="#mobile_info"><i class="material-icons">
             notes</i>
-            meowdy! 1</a></li>
-        <li><a class="waves-effect"><i class="material-icons">
+            Information</a></li>
+        <li><a class="waves-effect" onclick="closeSidenav(0)" href="#mobile_poses"><i class="material-icons">
             color_lens</i>
-            meowdy! 2</a></li>
-        <li><a class="waves-effect"><i class="material-icons">
-            perm_media</i>
-            meowdy! 3</a></li>
+            Colors</a></li>
 
         <li><div class="divider"></div></li>
-        <li><a class="subheader">Fun stuff</a></li>
+        <li><a class="subheader">Fun stuff (unfinished)</a></li>
 
         <li><a class="waves-effect"><i class="material-icons">
-            chat</i>
-            meowdy! 4</a></li>
+            perm_media</i>
+            Gallery</a></li>
 
         <li><a class="waves-effect"><i class="material-icons">
-            pets</i>
-            meowdy! 5</a></li>
+            house</i>
+            Mato's bedroom</a></li>
 
         <li><a class="waves-effect"><i class="material-icons">
             gesture</i>
-            meowdy! 6</a></li>
-
-        <li><div class="divider"></div></li>
-
-        <li><a class="waves-effect"><i class="material-icons">
-            airplanemode_active</i>
-            hi chris!</a></li>
+            TF gun</a></li>
     </ul>
 
-    <div class="dont-hide-on-med-and-up" id="mobile">
+    <section class="dont-hide-on-med-and-up flow-text" id="mobile">
         <div class="card hide-on-small-only no_mb">
-            <div class="card-content black-text flow-text">
+            <div class="card-content black-text">
+                <strong>Mobile version only!</strong><br><br>
                 Hey!! You're looking at this page on your computer, probably. I haven't started making the desktop version yet, and even though I did make it so that the mobile version stuff does show up on desktop, it's not gonna look good in landscape mode.<br>
-                Press F12 to open DevTools and then Ctrl+Shift+M to enter responsive/device mode! And then just either pick a phone or resize this be so wide that this message disappears.<br>
+                Press F12 to open DevTools and then Ctrl+Shift+M to enter responsive/device mode! And then just either pick a phone or resize the viewport until this message disappears.<br>
                 Alternatively just look at this on your phone...? ´:3
                 <p class="right matofont">_happy</p>
             </div>
@@ -87,6 +86,7 @@
                 <div class="carousel">
                     <a class="carousel-item"><img src="puppy_back_big.png" alt="back view"></a>
                     <a class="carousel-item"><img src="mikeluuu.png" alt="lucario?"></a>
+                    <a class="carousel-item"><img src="puppy.png" alt="tiny boy"></a>
                     <a class="carousel-item"><img src="puppy_front.jpg" alt="front view"></a>
                     <a class="carousel-item"><img src="cleaner.png" alt="front view but better"></a>
                 </div><!--
@@ -127,39 +127,46 @@
             </div>
         </div>
 
-        <div class="row no_mb">
-            <div class="container matofont">
-                <div class="section" id="mobile_quotes">
+        <div class="row no_mb z-depth-4">
+            <div class="container" style="width: 100%">
+                <div class="section" id="mobile_info">
                     <div class="row">
                         <div class="col s12">
-                            <blockquote class="flow-text">
-Mato is a smol/friend type pokemon.<br>
-His IV's are very low. He's not very fast, he's not very strong, and he's very soft.<br>
-However, due to his typing, the moves he gets STAB on are much more effective when your stats are low. Mato is very viable option and lovable.
-                            </blockquote>
-                            -- Ticki
-                        </div>
-                    </div>
-                    <div class="row no_mb">
-                        <div class="col s12">
-                            <blockquote class="flow-text">
-                                Blockquote
-                            </blockquote>
+
+                            <div class="quote"><div class="quote-author">
+                                <img src="images/quote_ticki.png" class="quote-image">
+                                <div class="quote-name">Ticki</div>
+                            </div><div class="quote-bubble">
+                                <p>Mato is a <span class="type-badge teal accent-3">smol</span>/&shy;<span class="type-badge pink accent-2">friend</span> type Pokémon.</p>
+                                <p>His <abbr class="tooltipped" data-position="top" data-tooltip="Individial values" title="Individial values">IV's</abbr> are very low. He's not very fast, he's not very strong, and he's very soft.</p>
+                                <p>However, due to his typing, the moves he gets <abbr class="tooltipped" data-position="top" data-tooltip="Same-type attack bonus" title="Same-type attack bonus">STAB</abbr> on are much more effective when your stats are low. Mato is very viable option and lovable.</p>
+                            </div></div>
+
+                            <div class="quote"><div class="quote-author">
+                                <img src="images/quote_mato.png" class="quote-image">
+                                <div class="quote-name">Mato</div>
+                            </div><div class="quote-bubble">
+                                <p>Oh my gosh, I'm so tiny.</p>
+                            </div></div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <footer class="page-footer cyan darken-2 white-text matofont nopadding">
+        <footer class="page-footer cyan darken-2 white-text nopadding">
+            <div class="container">
+                This is a <abbr title="work in progress">WIP</abbr> ref sheet page
+            </div>
             <div class="footer-copyright">
                 <div class="container">
                     <span class="left truncate">You can find more info in the side menu!</span>
-                    <span class="right">By Mato</span>
+                    <span class="right matofont large">By Mato</span>
                 </div>
             </div>
         </footer>
-    </div>
+    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script> -->
 </body>
