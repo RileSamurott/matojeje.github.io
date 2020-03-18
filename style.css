@@ -50,7 +50,24 @@
 }
 
 .no_mb {
-	margin-bottom: 0px;
+	margin-bottom: 0 !important;
+}
+
+.no_m {
+	margin: none !important;
+}
+.no_mlr {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
+
+.no_plr {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+.hidden-before-loaded {
+	visibility: hidden;
 }
 
 #mobile .carousel {
@@ -96,7 +113,7 @@
 	align-content: center;
 }
 
-#mobile {
+.bg-forest {
 	background-attachment: fixed;
 	background: #83a4d4;  /* fallback for old browsers */
 	background: linear-gradient(to bottom, #b6fbff, #83a4d4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -117,8 +134,9 @@
 	padding: 1em 0em;
 }
 
-.quote {
+.discord-text {
 	font-family: Whitney;
+	font-size: 16px;
 }
 
 .type-badge {
@@ -157,6 +175,7 @@
 		0 0.05rem 0.05rem rgba(0,0,0,0.5);
 	background-color: red;
 	transform: translateY(-0.2rem);
+	user-select: all;
 }
 
 .quote {
@@ -226,4 +245,62 @@
 	text-shadow:
 		0 0.1rem 0.3rem rgba(0,0,0,0.2),
 		0 0.05rem 0.05rem rgba(0,0,0,0.5);
+}
+
+.tabs .tab a {
+	color: #a5d8c0;
+	text-transform: none;
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+	background-color: transparent;
+    color: white;
+}
+
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+	background-color: rgba(255, 255, 255, 0.15);
+}
+
+.tabs .indicator {
+	background-color: #51f3a7;
+	height: 3px;
+}
+
+.pane {
+	padding-top: 0.75rem !important;
+}
+
+#desktop {
+	max-height: calc(100vh - 64px);
+	overflow: hidden;
+}
+
+#desktop_poses {
+	padding: 1rem;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+}
+
+.cursor-paw {
+	cursor: url(images/cursor_paw.png) 5 5, default;
+}
+
+.cursor-point, #desktop a {
+	cursor: url(images/cursor_point.png) 6 3, pointer;
+}
+
+.cursor-help, #desktop abbr {
+	cursor: url(images/cursor_help_alt.png) 5 14, pointer;
+}
+
+#desktop .lottie-vertical {
+	/* width: auto;
+	height: 100%;
+    height: -moz-available;
+    height: -webkit-fill-available;
+	height: fill-available; */
+	border: 1px dashed blue;
+	height: calc(100vh - 64px - 3rem);
+	max-width: calc(0rem + ((100vh - 64px - 3rem) / 20 * 12)); /* opt. offset + height * aspect ratio correction */
 }

@@ -5,16 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#02659E">
+
+    <title>Mato's ref sheet!</title>
+
+    <link rel="icon" href="/images/favicon_skyperii.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
 </head>
-<body class="blue-grey darken-4 white-text" onload="loaded()">
+<body class="blue-grey darken-4 white-text">
 
     <nav class="z-depth-0 light-blue darken-3">
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo center matofont truncate">Mato the Riolu</a>
+            <a href="#" class="brand-logo center matofont truncate">Mato the Riolu<i class="right hide-on-small-only">(work in progress...)</i></a>
             <ul id="nav-mobile" class="left hide-on-med-and-up">
                 <li><a href="#" data-target="slide-out" class="sidenav-trigger waves-effect circle"><i class="material-icons">menu</i></a></li>
             </ul>
@@ -63,7 +67,7 @@
             TF gun</a></li>
     </ul>
 
-    <section class="dont-hide-on-med-and-up flow-text" id="mobile">
+    <section class="hide-on-med-and-up flow-text bg-forest" id="mobile">
         <div class="card hide-on-small-only no_mb">
             <div class="card-content black-text">
                 <strong>Mobile version only!</strong><br><br>
@@ -136,7 +140,7 @@
                             <div class="quote"><div class="quote-author">
                                 <img src="images/quote_ticki.png" class="quote-image">
                                 <div class="quote-name">Ticki</div>
-                            </div><div class="quote-bubble">
+                            </div><div class="quote-bubble discord-text">
                                 <p>Mato is a <span class="type-badge teal accent-3">smol</span>/&shy;<span class="type-badge pink accent-2">friend</span> type Pokémon.</p>
                                 <p>His <abbr class="tooltipped" data-position="top" data-tooltip="Individial values" title="Individial values">IV's</abbr> are very low. He's not very fast, he's not very strong, and he's very soft.</p>
                                 <p>However, due to his typing, the moves he gets <abbr class="tooltipped" data-position="top" data-tooltip="Same-type attack bonus" title="Same-type attack bonus">STAB</abbr> on are much more effective when your stats are low. Mato is very viable option and lovable.</p>
@@ -144,9 +148,9 @@
 
                             <div class="quote"><div class="quote-author">
                                 <img src="images/quote_mato.png" class="quote-image">
-                                <div class="quote-name">Mato</div>
+                                <div class="quote-name discord-text">Mato</div>
                             </div><div class="quote-bubble">
-                                <p>Oh my gosh, I'm so tiny.</p>
+                                <p>I'm looking for a few more cute quotes to put here! Please send me a DM if you have anything to say~</p>
                             </div></div>
 
                         </div>
@@ -167,7 +171,61 @@
             </div>
         </footer>
     </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script> -->
+
+    <section class="hide-on-small-only cursor-paw" id="desktop">
+        <div class="row no_m no_mlr">
+            <div id="desktop_info" class="col s12 m4">
+                <div class="row">
+                    <div class="col s12 no_plr">
+                        <ul class="tabs black teal-text">
+                            <li class="tab col s4"><a href="#info-pane" class="active">Info</a></li>
+                            <li class="tab col s4"><a href="#img-pane">Gallery</a></li>
+                            <li class="tab col s4"><a href="#misc-pane">Misc</a></li>
+                        </ul>
+                    </div>
+                    <div id="info-pane" class="col s12 pane bg-forest">
+                        <div class="quote"><div class="quote-author">
+                            <img src="images/quote_ticki.png" class="quote-image">
+                            <div class="quote-name">Ticki</div>
+                        </div><div class="quote-bubble discord-text">
+                            <p>Mato is a <span class="type-badge teal accent-3">smol</span>/&shy;<span class="type-badge pink accent-2">friend</span> type Pokémon.</p>
+                            <p>His <abbr title="Individial values">IV's</abbr> are very low. He's not very fast, he's not very strong, and he's very soft.</p>
+                            <p>However, due to his typing, the moves he gets <abbr title="Same-type attack bonus">STAB</abbr> on are much more effective when your stats are low. Mato is very viable option and lovable.</p>
+                        </div></div>
+
+                        <div class="quote"><div class="quote-author">
+                            <img src="images/quote_mato.png" class="quote-image">
+                            <div class="quote-name">Mato</div>
+                        </div><div class="quote-bubble discord-text">
+                            <p>I'm looking for a few more cute quotes to put here! Please send me a DM if you have anything to say~</p>
+                        </div></div>
+                        <div style="height: -webkit-fill-available">uwu</div>
+                    </div>
+                    <div id="img-pane" class="col s12 pane white hidden-before-loaded">
+
+                    </div>
+                    <div id="misc-pane" class="col s12 pane teal hidden-before-loaded">
+
+                    </div>
+                </div>
+            </div>
+            <div id="desktop_poses" class="col s12 m7 bg-forest">
+                <lottie-player src="images/lottie/placeholder.json" class="lottie-vertical" loop autoplay></lottie-player>
+                <lottie-player src="images/lottie/placeholder.json" class="lottie-vertical" loop autoplay></lottie-player>
+            </div>
+            <div id="desktop_palette" class="col s12 m1 palette">
+                <div class="tooltipped colorblob" data-position="left" style="background-color: #78E0D9;" data-tooltip="Main fur:<br>#78E0D9"></div>
+                <div class="tooltipped colorblob" data-position="left" style="background-color: #554E5D;" data-tooltip="Dark fur:<br>#554E5D"></div>
+                <div class="tooltipped colorblob" data-position="left" style="background-color: #14C8E8;" data-tooltip="Eye iris:<br>#14C8E8"></div>
+                <div class="tooltipped colorblob" data-position="left" style="background-color: #FFDA38;" data-tooltip="Collar:<br>#FFDA38"></div>
+                <div class="tooltipped colorblob" data-position="left" style="background-color: #F4F4F4;" data-tooltip="White pad:<br>#F4F4F4"></div>
+                <div class="tooltipped colorblob" data-position="left" style="background-color: #3DFFA7;" data-tooltip="Paw pad:<br>#3DFFA7"></div>
+                <div class="tooltipped colorblob" data-position="left" style="background-color: #E47775;" data-tooltip="Tongue:<br>#E47775"></div>
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/materialize-css@1/dist/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
 </body>
 </html>
