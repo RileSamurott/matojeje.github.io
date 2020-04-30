@@ -46,7 +46,7 @@
 }
 
 .nopadding {
-	padding: 0px !important;
+	padding: 0 !important;
 }
 
 .no_mb {
@@ -54,7 +54,7 @@
 }
 
 .no_m {
-	margin: none !important;
+	margin: 0 !important;
 }
 .no_mlr {
 	margin-left: 0 !important;
@@ -273,6 +273,10 @@
 #desktop {
 	max-height: calc(100vh - 64px);
 	overflow: hidden;
+}
+
+#desktop_row {
+	display: flex;
 }
 
 #desktop_poses {
